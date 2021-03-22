@@ -1,0 +1,15 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="day_3_python.number_of_days_function.minutes" />
+          <option value="day_3_python.number_of_days_function.*" />
+          <option value="projects_in_python3.functions_testing.name" />
+          <option value="projects_in_python3.functions_testing.age" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
