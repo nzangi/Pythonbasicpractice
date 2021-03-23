@@ -24,13 +24,13 @@ number_of_students = input("Please enter the number of students you want to calc
 for i in number_of_students:
     name = input(f"Please enter the name of student : ")
     names.append(name)
-    for k in range(5):
+    for k in range(3):
         subject = input(f"Enter the names of subject to calculate the sum and average of {name}: ")
         subjects.append(subject)
-        mark = int(input(f"Please  input the marks of {name} accordingly to the subject: "))
+        mark = int(input(f"Please  input the marks of {name} accordingly to the {subject}: "))
         marks.append(mark)
         total = sum(marks)
-        avarage = total/len(marks)
+        avarage = total / len(marks)
 
-for i in number_of_students:
-    print(names[i] + ":" + subjects[i] + ":" + marks[i]+ total  + ":" + avarage[i])
+# for i in number_of_students:
+#     print(names[i] + ":" + subjects[i] + ":" + marks[i] + total + ":" + avarage)
