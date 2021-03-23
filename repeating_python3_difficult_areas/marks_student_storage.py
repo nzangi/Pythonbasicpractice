@@ -30,7 +30,7 @@ for i in number_of_students:
         mark = int(input(f"Please  input the marks of {name} accordingly to the {subject}: "))
         marks.append(mark)
         total = sum(marks)
-        avarage = total / len(marks)
+        avarage = total//len(marks)
 
-# for i in number_of_students:
-#     print(names[i] + ":" + subjects[i] + ":" + marks[i] + total + ":" + avarage)
+for i in number_of_students:
+    print(names[i] + ":" + subjects[i] + ":" + marks[i] + total + ":" + avarage)
