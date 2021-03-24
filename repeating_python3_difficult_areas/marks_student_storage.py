@@ -17,20 +17,29 @@
 names = []
 subjects = []
 marks = []
-total = 0
-avarage = 0
+averages = []
+totals = []
 
-number_of_students = input("Please enter the number of students you want to calculate their marks: ")
-for i in number_of_students:
-    name = input(f"Please enter the name of student : ")
+number_of_students = int(input("Please Enter the number of students who you want to calculate their marks: "))
+for i in range(number_of_students):
+    name = input(f"Please enter the name of student {i+1}: ")
     names.append(name)
-    for k in range(3):
-        subject = input(f"Enter the names of subject to calculate the sum and average of {name}: ")
-        subjects.append(subject)
-        mark = int(input(f"Please  input the marks of {name} accordingly to the {subject}: "))
-        marks.append(mark)
-        total = sum(marks)
-        avarage = total//len(marks)
 
-for i in number_of_students:
-    print(names[i] + ":" + subjects[i] + ":" + marks[i] + total + ":" + avarage)
+    student_subjects = []
+    student_marks = []
+
+    for k in range(2):
+        subject = input(f"Enter the name of subject  of {name} DONE IN EXAM: ")
+        student_subjects.append(subject)
+        mark = int(input(f"Please Enter the marks of {name} with respect to {subject}: "))
+        student_marks.append(mark)
+
+    subjects.append(student_subjects)
+    marks.append(student_marks)
+    total = sum(student_marks)
+    totals.append(total)
+    average = total / len(marks)
+    averages.append(average)
+
+for i in range(number_of_students):
+    print(names[i]+ ":" + str(subjects[i]) + ":" + str(marks[i])+ str(totals) + ":" + str(averages))
