@@ -5,8 +5,8 @@
 #
 #     si = (p * t * r) / 100
 #
-#     print('The Simple Interest is', si)
-#     return si
+    # print('The Simple Interest is', si)
+    # return si
 #
 #
 # # Driver code
