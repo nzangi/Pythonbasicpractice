@@ -1,0 +1,31 @@
+names = []
+subjects = []
+marks = []
+totals = []
+averages = []
+
+number_of_students = int(input("Please enter the TOTAL number of students to be in the list NAMES: "))
+for i in range(number_of_students):
+    name = input(f"Enter the name of student {i + 1}: ")
+    names.append(name)
+
+    student_subjects = []
+    student_marks = []
+    number_of_subjects = int(input("Please enter NUMBER OF SUBJECTS the student did: "))
+
+    for k in range(number_of_subjects):
+        subject = input("Please Enter the name of the subject: ")
+        student_subjects.append(subject)
+
+        mark = int(input(f"Please enter the number of MARKS of student {name.upper()} scored in {subject.upper()}: "))
+        student_marks.append(mark)
+
+    subjects.append(student_subjects)
+    marks.append(student_marks)
+    total = sum(student_marks)
+    totals.append(total)
+    average = total / len(student_subjects)
+    averages.append(average)
+
+for i in range(number_of_students):
+    print(names[i] + ":" + str(subjects[i]) + ":" + str(marks[i]) + ":" + str(totals) + ":" + str(averages))
