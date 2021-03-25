@@ -23,10 +23,20 @@ for i in range(number_of_students):
     totals.append(total)
     average = total / len(student_marks)
     averages.append(average)
+print("NAME    MATHS    ENGLISH   KISWAHILI   SCIENCE   SOCIAL STUDIES  TOTAL  AVERAGE")
 
-print("NAME  MATHS    ENGLISH   KISWAHILI   SCIENCE   SOCIAL STUDIES  TOTAL  AVERAGE")
+output = ""
 for i in range(number_of_students):
-    print(names[i], str(marks[i]), str(totals[i]), str(averages[i]))
+    output += names[i]+"\t"
+
+    for mark in marks[i]:
+        output += str(mark)+"\t\t\t"
+    output += str(totals[i])+"\t\t" + str(averages[i])+"\n"
+
+print(output)
+
+# print(names[i]+"\t", str(marks[i][i])+"\t\t\t", str(marks[i][i+1])+"\t\t", str(marks[i][i+2])+"\t\t",
+#       str(marks[i][i+3])+"\t\t\t", str(marks[i][i+4])+"\t\t\t",str(totals[i])+"\t\t\t", str(averages[i])+"\t\t\t")
 
 # number_of_subjects = int(input("Please enter NUMBER OF SUBJECTS the student did: "))
 
