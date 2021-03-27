@@ -26,16 +26,17 @@ dateEntry = tk.Entry()
 dateEntry.grid(column=1, row=4)
 
 
-def getInput():
+def get_Input():
     name = nameEntry.get()
-    monkey = Person(name, datetime.date(int(yearEntry.get()), int(monthEntry.get()), int(dateEntry.get())))
-    textArea = tk.Text(master=window, height=10, width=25)
+    monkey = Person(name, datetime.date(int(yearEntry.get()), int(monthEntry.get()),
+                                        int(dateEntry.get())))
+    textArea = tk.Text(master=window, height=15, width=25)
     textArea.grid(column=1, row=6)
-    answer = " Heyy {monkey}!!!. You are {age} years old!!!".format(monkey=name, age=monkey.age())
+    answer = "Hey {monkey}!!!. You are {age} years old!!!".format(monkey=name, age=monkey.age())
     textArea.insert(tk.END, answer)
 
 
-button = tk.Button(window, text="Calculate Age", command=getInput, bg="pink")
+button = tk.Button(window, text="Calculate Age", command=get_Input, bg="pink")
 button.grid(column=1, row=5)
 
 
@@ -44,10 +45,10 @@ class Person:
         self.name = name
         self.birthdate = birthdate
 
-        def age(self):
-            today = datetime.date.today()
-            age = today.year - self.birthdate.year
-            return age
+    def age(self):
+        today = datetime.date.today()
+        age = today.year - self.birthdate.year
+        return age
 
 
 image = Image.open('castle.png')
