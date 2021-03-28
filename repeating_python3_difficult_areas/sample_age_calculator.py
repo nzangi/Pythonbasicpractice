@@ -39,7 +39,7 @@ def my_main_function():
     my_names = Person(name, datetime.date(int(year_entry.get()), int(month_entry.get()), int(date_entry.get())))
     text_area = tk.Text(master=window, height=15, width=25)
     text_area.grid(column=1, row=6)
-    answer = " Hey {monkey}!!!. You are {age} years old!!! ".format(monkey=name, age=my_names.age())
+    answer = " Hey {monkey}!!!.\n You are {age} years old!!! ".format(monkey=name, age=my_names.age())
     text_area.insert(tk.END, answer)
 
 
