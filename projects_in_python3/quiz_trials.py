@@ -14,9 +14,9 @@ him/her 2 points , stage 3 give him/her 1 point and if he/she fails the three tr
 # rewarded his points and if he fails he is provided with answer.
 # while True:
 points = []
+name = input("What is your before attempting the quizes ?  ")
 questions = ["What is your name of your country? ", "2. Which is your letter ? "]
 answers = [['KENYA', 'UGANDA', 'RWANDA', 'BURUDI'], ['A', 'B', 'C', 'D']]
-
 indexes = [1, 1]
 
 
@@ -28,7 +28,7 @@ def answer_question(question, answers, index):
         print(question)
         for answer in answers:
             print('\t' + answer)
-        answer = input(":")
+        answer = input(":").upper()
         if answer == answers[index]:
             trials = trials + 1
             if trials == 1:
@@ -54,7 +54,7 @@ for question in questions:
     total_points = answer_question(question, answers[index], indexes[index])
     points.append(total_points)
 
-    print(f"Your Total points in the attempted questions is: {sum(points)} Points")
+    print(f" {name} Your Total points in the attempted questions is: {sum(points)} Points")
 
 # country_city = input(print(f"What is your {country} city: "))
 # county = input(print(f"What is your county in {country}: "))
